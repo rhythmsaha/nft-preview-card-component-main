@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(217, 54%, 11%);
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    margin-top: 10vh;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 15vh;
+    }
+}
+
+.card {
+    background: hsl(216, 50%, 16%);
+    width: 90%;
+    max-width: 375px;
+    margin: auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.item_image {
+    max-width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        border-radius: 1rem;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: hsla(178, 100%, 50%, 0.219);
+        opacity: 0;
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        img {
+            height: 80px;
+            object-fit: contain;
+        }
+    }
+}
+
+.details {
+    margin-top: 1rem;
+    color: white;
+
+    h1 {
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 16px;
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+        line-height: 22px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.offer {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.price {
+    color: hsl(178, 100%, 50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+}
+
+.validity {
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 0.3rem;
+}
+
+.seller {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+
+    img {
+        height: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+
+    p {
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+
+        strong {
+            color: white;
+            font-weight: 300;
+            transition: 0.3s;
+
+            &:hover {
+                color: hsl(178, 100%, 50%);
+                cursor: pointer;
+            }
+        }
+    }
+}
